@@ -1,5 +1,133 @@
 // Product Tab Switching
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const navMenu = document.querySelector('.nav-menu');
+    const header = document.querySelector('.header');
+    let isMobileMenuOpen = false;
+
+    // Function to check if we're on mobile
+    function isMobileDevice() {
+        return window.innerWidth <= 768;
+    }
+
+    if (mobileMenuButton && navMenu && header) {
+        mobileMenuButton.addEventListener('click', function() {
+            // Only handle mobile menu on mobile devices
+            if (!isMobileDevice()) {
+                return;
+            }
+            
+            isMobileMenuOpen = !isMobileMenuOpen;
+            
+            if (isMobileMenuOpen) {
+                // Add class to nav menu for styling
+                navMenu.classList.add('mobile-open');
+                navMenu.style.display = 'flex';
+                
+                // Add class to header for fixed positioning
+                header.classList.add('menu-open');
+                
+                // Change button icon
+                mobileMenuButton.innerHTML = '✕';
+                
+                // Add backdrop
+                const backdrop = document.createElement('div');
+                backdrop.className = 'mobile-menu-backdrop';
+                document.body.appendChild(backdrop);
+                
+                // Prevent body scroll
+                document.body.style.overflow = 'hidden';
+                
+                backdrop.addEventListener('click', closeMobileMenu);
+            } else {
+                closeMobileMenu();
+            }
+        });
+
+        function closeMobileMenu() {
+            // Remove classes and styles
+            navMenu.classList.remove('mobile-open');
+            
+            // Only hide nav menu on mobile
+            if (isMobileDevice()) {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+            }
+            
+            header.classList.remove('menu-open');
+            
+            // Reset button icon
+            mobileMenuButton.innerHTML = '☰';
+            isMobileMenuOpen = false;
+            
+            // Remove backdrop
+            const backdrop = document.querySelector('.mobile-menu-backdrop');
+            if (backdrop) {
+                backdrop.remove();
+            }
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
+        }
+
+        // Close mobile menu when nav link is clicked (only on mobile)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (isMobileDevice() && isMobileMenuOpen) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                // Desktop mode - ensure nav menu is visible and clean up mobile menu
+                if (isMobileMenuOpen) {
+                    closeMobileMenu();
+                }
+                navMenu.style.display = 'flex';
+                navMenu.classList.remove('mobile-open');
+                header.classList.remove('menu-open');
+                document.body.style.overflow = '';
+                
+                // Remove any leftover backdrop
+                const backdrop = document.querySelector('.mobile-menu-backdrop');
+                if (backdrop) {
+                    backdrop.remove();
+                }
+            } else {
+                // Mobile mode - hide nav menu unless mobile menu is open
+                if (!isMobileMenuOpen) {
+                    navMenu.style.display = 'none';
+                }
+            }
+        });
+
+        // Close mobile menu on escape key (only on mobile)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isMobileMenuOpen && isMobileDevice()) {
+                closeMobileMenu();
+            }
+        });
+
+        // Initialize proper display state based on screen size
+        function initializeNavMenu() {
+            if (isMobileDevice()) {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.classList.remove('mobile-open');
+                header.classList.remove('menu-open');
+            }
+        }
+
+        // Initialize on page load
+        initializeNavMenu();
+    }
+
     const tabButtons = document.querySelectorAll('.tab-button');
     const productDetails = document.querySelector('.product-details');
     

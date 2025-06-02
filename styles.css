@@ -157,7 +157,12 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    background: #F7F7F9;
+    background-image: 
+        linear-gradient(#E1EDF1 1px, transparent 1px),
+        linear-gradient(90deg, #E1EDF1 1px, transparent 1px);
+    background-size: 72px 72px;
+    background-position: 0 0, 0 0;
     padding: 120px 0;
     min-height: 700px;
     display: flex;
@@ -572,7 +577,7 @@ body {
 /* Products Section */
 .products-section {
     padding: 120px 0;
-    background: #f8f9fa;
+    background: #F7F7F9;
 }
 
 .product-showcase {
@@ -1048,10 +1053,10 @@ body {
 }
 
 /* Investor Section */
-.investor-section {
+/* .investor-section {
     padding: 120px 0;
     background: #f8f9fa;
-}
+} */
 
 .investor-content {
     display: grid;
@@ -1322,7 +1327,7 @@ body {
 /* IR Assistant Section */
 .ir-assistant-section {
     padding: 120px 0;
-    background: #f8f9fa;
+    background: #F7F7F9;
 }
 
 .chatbot-container {
