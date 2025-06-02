@@ -2009,21 +2009,19 @@ body {
     position: absolute;
     top: 50%;
     right: 100%;
-    width: 125px;
+    width: 120px;
 }
 .pointer-4 {
     position: absolute;
-    top: 100%;
-    left: 100%;
-    transform: translate(-22%, -45%);
+    top: 75%;
+    left: 89%;
     width: 120px;
 }
 .pointer-5 {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 75%;
+    right: 90%;
     width: 120px;
-    transform: translate(-80%,-45%);
 }
 
 .pipeline-image-txt {
@@ -2042,7 +2040,7 @@ body {
 
 .pipeline-image-txt p {
     font-size: 11px;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
 }
 
 .pipeline-info {
@@ -2097,4 +2095,14 @@ body {
 .pipeline-title.success {
     color: #008204;
     background-color: #E6F8ED;
+}
+.page-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-right{
+    max-width: 40%;
+    text-align: right;
 }

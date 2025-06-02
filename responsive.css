@@ -1,0 +1,11 @@
+@media(max-width:1199px){
+    .pointer-2{
+        width: 110px;
+    }
+    .pointer-3{
+        width: 105px;
+    }
+    .pipeline-info{
+        padding: 16px;
+    }
+}
