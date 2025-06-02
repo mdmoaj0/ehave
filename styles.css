@@ -129,6 +129,8 @@ body {
     padding: 12px 0;
     font-size: 14px;
     font-weight: 500;
+    z-index: 10;
+    position: relative;
 }
 
 .ticker-content {
@@ -422,8 +424,6 @@ text-align: center;
 
 /* Timeline Section */
 .timeline-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #4DC3D5 0%, #1D838E 100%);
     color: white;
     position: relative;
     overflow: hidden;
@@ -442,11 +442,9 @@ text-align: center;
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    height: 400px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 40px 0;
 }
 
 .timeline-curve {
@@ -739,7 +737,7 @@ text-align: center;
     color: #333;
 }
 
-.product-details > p {
+.product-details>p {
     font-size: 16px;
     color: #666;
     margin-bottom: 30px;
@@ -1008,7 +1006,7 @@ text-align: center;
     position: relative;
     z-index: 2;
     clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    box-shadow: 
+    box-shadow:
         0 25px 50px rgba(0, 0, 0, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
@@ -1081,7 +1079,8 @@ text-align: center;
     
 }
 
-.filing-item, .press-item {
+.filing-item,
+.press-item {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -1195,7 +1194,7 @@ text-align: center;
     font-family: 'Inter', sans-serif;
 }
 
-.newsletter-signup > p {
+.newsletter-signup>p {
     font-size: 14px;
     color: #666;
     margin-bottom: 20px;
@@ -1542,7 +1541,7 @@ text-align: center;
     .logo-image {
         height: 35px;
     }
-    
+
     .nav-menu {
         display: none;
     }
@@ -1598,43 +1597,43 @@ text-align: center;
     .hero-illustration {
         transform: perspective(800px) rotateY(0);
     }
-    
+
     .product-showcase {
         flex-direction: column;
     }
-    
+
     .product-image {
         margin-bottom: 40px;
     }
-    
+
     .product-preview-image {
         max-height: 400px;
     }
-    
+
     .product-tabs {
         justify-content: center;
         gap: 8px;
     }
-    
+
     .tab-button {
         padding: 10px 16px;
         font-size: 12px;
     }
-    
+
     .timeline {
         flex-direction: column;
         gap: 40px;
     }
-    
+
     .timeline::before {
         display: none;
     }
-    
+
     .pipeline-diagram {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .investor-content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1779,4 +1778,160 @@ text-align: center;
 
 .view-link:hover, .read-link:hover {
     opacity: 0.8;
-} 
+}
+
+
+/* Hasan Start */
+#timeline-control {
+    background-color: #F7F7F9;
+    padding: 42px 0;
+}
+
+#timeline-control .section-subtitle {
+    color: #333;
+    border: 1px solid #D3D3D3;
+    display: inline-block;
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 6px 12px;
+    border-radius: 50px;
+    background-color: #fff;
+    margin-bottom: 16px;
+    width: auto;
+    height: auto;
+}
+
+#timeline-control .section-title {
+    color: #000000;
+    font-weight: normal;
+    font-size: 32px;
+}
+
+
+
+.timeline-info {
+    padding: 0 16px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#timeline-control .section-header {
+    margin-bottom: 36px;
+}
+
+.timeline-info span {
+    font-size: 56px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #b3b3b385, #e0e0e014);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.timeline-info h6 {
+    color: #000000;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.timeline-info p {
+    color: #6B6B6B;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 6px;
+    line-height: 24px;
+}
+
+.timeline-curve-conatiner {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.timeline-curve-conatiner img {
+    width: 100%;
+    transform: rotate(1deg) translate(-8px, 5px);
+}
+
+#timeline-control .timeline {
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    position: relative;
+    padding-bottom: 48px;
+}
+
+.timeline-info-4 {
+    grid-row: 3/5;
+    grid-column: 14/18;
+}
+
+.timeline-info-2 {
+    grid-row: 4/7;
+    grid-column: 6/10;
+}
+
+.timeline-info-3 {
+    grid-row: 2/4;
+    grid-column: 10/14;
+}
+
+.timeline-info-1 {
+    grid-row: 3/5;
+    grid-column: 1/5;
+}
+
+
+.hexa-wrapper {
+    width: 72px;
+    height: 72px;
+    filter: drop-shadow(0px 5px 15px #1281614D);
+}
+
+.hexa-inner {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    clip-path: polygon(50% 0%,
+            93% 25%,
+            93% 75%,
+            50% 100%,
+            7% 75%,
+            7% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+
+.hexa-inner i {
+    color: #AFEFFF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hexa-wrapper-1 {
+    grid-row: 5/8;
+    grid-column: 3/4;
+    transform: translateY(32%);
+}
+
+.hexa-wrapper-2 {
+    grid-row: 3/5;
+    grid-column: 8;
+    transform: translateY(-32%);
+}
+
+.hexa-wrapper-3 {
+    grid-row: 6/5;
+    grid-column: 12;
+    transform: translateY(-85%);
+}
+
+.hexa-wrapper-4 {
+    grid-row: 1 / 4;
+    grid-column: 16;
+    transform: translate(-50%,-32%);
+}
