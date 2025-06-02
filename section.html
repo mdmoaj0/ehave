@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .timeline-line {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 160px;
+        z-index: 0;
+      }
+
+      .timeline-line path {
+        stroke: #45d2d2;
+        stroke-width: 3;
+        fill: none;
+      }
+    </style>
+  </head>
+  <body class="bg-[#f8f9fa] text-gray-800 font-sans">
+    <section class="relative py-20 px-4 sm:px-10 md:px-24">
+      <div class="text-center mb-16">
+        <button class="px-5 py-1.5 rounded-full border border-gray-300 text-sm text-gray-600 mb-5">
+          Our Story
+        </button>
+        <h2 class="text-3xl sm:text-4xl font-medium leading-relaxed">
+          From Vision to Innovation in <br />
+          <span class="font-bold text-black">AI and Therapeutics</span>
+        </h2>
+      </div>
+
+      <!-- SVG Curved Line -->
+      <svg class="timeline-line" viewBox="0 0 1000 200" preserveAspectRatio="none">
+        <path d="M0,150 C250,0 750,300 1000,150" />
+      </svg>
+
+      <!-- Timeline Events -->
+      <div class="relative z-10 flex justify-between items-end max-w-7xl mx-auto">
+        <!-- 2017 -->
+        <div class="text-center w-1/4">
+          <div class="mb-6 relative z-10">
+            <div class="w-16 h-16 rounded-full bg-white shadow-xl mx-auto flex items-center justify-center">
+              <img src="https://img.icons8.com/ios-filled/50/user-group-man-man.png" class="w-6 h-6" />
+            </div>
+          </div>
+          <h3 class="text-[20px] font-bold text-gray-300 mb-1">2017</h3>
+          <p class="font-semibold">Leadership Established</p>
+          <p class="text-sm text-gray-600 leading-tight">
+            and clinical<br />strategy defined
+          </p>
+        </div>
+
+        <!-- 2020 -->
+        <div class="text-center w-1/4">
+          <div class="mb-6 relative z-10">
+            <div class="w-16 h-16 rounded-full bg-white shadow-xl mx-auto flex items-center justify-center">
+              <img src="https://img.icons8.com/ios-filled/50/puzzle.png" class="w-6 h-6" />
+            </div>
+          </div>
+          <h3 class="text-[20px] font-bold text-gray-300 mb-1">2020</h3>
+          <p class="font-semibold">MegaTeam secures</p>
+          <p class="text-sm text-gray-600 leading-tight">
+            FDA pathway for ADHD<br />assessment and treatment
+          </p>
+        </div>
+
+        <!-- 2023 -->
+        <div class="text-center w-1/4">
+          <div class="mb-6 relative z-10">
+            <div class="w-16 h-16 rounded-full bg-white shadow-xl mx-auto flex items-center justify-center">
+              <img src="https://img.icons8.com/ios-filled/50/smart-home-checked.png" class="w-6 h-6" />
+            </div>
+          </div>
+          <h3 class="text-[20px] font-bold text-gray-300 mb-1">2023</h3>
+          <p class="font-semibold">Internal AI research program</p>
+          <p class="text-sm text-gray-600 leading-tight">
+            launched to explore<br />large-language-model infrastructure
+          </p>
+        </div>
+
+        <!-- 2025 -->
+        <div class="text-center w-1/4">
+          <div class="mb-6 relative z-10">
+            <div class="w-16 h-16 rounded-full bg-white shadow-xl mx-auto flex items-center justify-center">
+              <img src="https://img.icons8.com/ios-filled/50/artificial-intelligence.png" class="w-6 h-6" />
+            </div>
+          </div>
+          <h3 class="text-[20px] font-bold text-gray-300 mb-1">2025</h3>
+          <p class="font-semibold">Growth milestone</p>
+          <p class="text-sm text-gray-600 leading-tight">
+            acquisition of AIHeadhunter;<br />stealth build of AI BioLab and<br />AI HealthOps
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
