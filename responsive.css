@@ -1,0 +1,30 @@
+@media(max-width:1199px){
+    .pointer-2{
+        width: 110px;
+    }
+    .pointer-3{
+        width: 105px;
+    }
+    .pipeline-info{
+        padding: 16px;
+    }
+}
+@media(max-width:575px){
+    .page-footer{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .footer-right p{
+        text-align: left;
+    }
+    .footer-right .site-desc,
+    .footer-bottom{
+        gap: 8px;
+    }
+    .contact-email,
+    .contact-info,
+    .footer-right{
+        max-width: 100%;
+    } 
+}

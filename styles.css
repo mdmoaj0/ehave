@@ -593,13 +593,13 @@ body {
 
 .product-image {
     background: linear-gradient(135deg, #5D5FEF 0%, #7371FC 100%);
-    border-radius: 24px;
+    border-radius: 12px;
     padding: 0;
     color: white;
-    height: 600px;
+    /* height: 600px; */
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); */
 }
 
 .ai-headhunter-preview {
@@ -623,11 +623,13 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 0 16px;
 }
 
 .interface-mockup {
     background: white;
-    border-radius: 0 0 24px 24px;
+    border-radius: 4px 4px 0 0;
+    /* border-radius: 0 0 24px 24px; */
     padding: 0;
     margin-bottom: 0;
     box-shadow: none;
@@ -1840,12 +1842,12 @@ body {
 .timeline-info h6 {
     font-family: Inter;
     color: #000000;
-font-weight: 500;
-font-size: 20px;
-line-height: 100%;
-/* background: var(--Primary-Text, #000000); */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    /* background: var(--Primary-Text, #000000); */
 
-letter-spacing: 0%;
+    letter-spacing: 0%;
 
 }
 
@@ -1990,6 +1992,7 @@ letter-spacing: 0%;
     grid-column: 6 / 8;
     position: relative;
 }
+
 .pointers>img {
     width: 100%;
     height: auto;
@@ -2015,21 +2018,21 @@ letter-spacing: 0%;
     position: absolute;
     top: 50%;
     right: 100%;
-    width: 125px;
+    width: 120px;
 }
+
 .pointer-4 {
     position: absolute;
-    top: 100%;
-    left: 100%;
-    transform: translate(-22%, -45%);
+    top: 75%;
+    left: 89%;
     width: 120px;
 }
+
 .pointer-5 {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 75%;
+    right: 90%;
     width: 120px;
-    transform: translate(-80%,-45%);
 }
 
 .pipeline-image-txt {
@@ -2048,7 +2051,7 @@ letter-spacing: 0%;
 
 .pipeline-image-txt p {
     font-size: 11px;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
 }
 
 .pipeline-info {
@@ -2103,4 +2106,36 @@ letter-spacing: 0%;
 .pipeline-title.success {
     color: #008204;
     background-color: #E6F8ED;
+}
+
+.page-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    color: #333333;
+}
+
+.footer-right {
+    max-width: 50%;
+    text-align: right;
+}
+
+.footer-right .site-desc {
+    margin-top: 12px;
+}
+
+.page-footer .contact-info {
+    margin-top: 0;
+}
+.page-footer .contact-email{
+    margin-top: 8px;
+}
+.page-footer .contact-email a{
+    text-decoration: underline;
+    color: #333333;
+    font-weight: 500;
+}
+.footer-right p{
+    text-align: right;
 }
