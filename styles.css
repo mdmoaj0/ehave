@@ -1970,6 +1970,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
     gap: 16px;
     padding-bottom: 42px;
+    overflow: hidden;
 }
 
 .pipeline-info-box-1 {
@@ -1988,7 +1989,7 @@ body {
 }
 
 .pipeline-image {
-    grid-row: 16 / 10;
+    grid-row: 15 / 10;
     grid-column: 6 / 8;
     position: relative;
 }
@@ -2012,6 +2013,7 @@ body {
     top: 50%;
     left: 100%;
     width: 120px;
+    transform: translate(0, -15%);
 }
 
 .pointer-3 {
@@ -2019,18 +2021,19 @@ body {
     top: 50%;
     right: 100%;
     width: 120px;
+    transform: translate(0, -15%);
 }
 
 .pointer-4 {
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 89%;
     width: 120px;
 }
 
 .pointer-5 {
     position: absolute;
-    top: 75%;
+    top: 80%;
     right: 90%;
     width: 120px;
 }
@@ -2128,14 +2131,17 @@ body {
 .page-footer .contact-info {
     margin-top: 0;
 }
-.page-footer .contact-email{
+
+.page-footer .contact-email {
     margin-top: 8px;
 }
-.page-footer .contact-email a{
+
+.page-footer .contact-email a {
     text-decoration: underline;
     color: #333333;
     font-weight: 500;
 }
-.footer-right p{
+
+.footer-right p {
     text-align: right;
 }

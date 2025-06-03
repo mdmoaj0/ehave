@@ -1,30 +1,121 @@
-@media(max-width:1199px){
-    .pointer-2{
+@media(max-width:1199.99px) {
+    .pointer-2 {
         width: 110px;
     }
-    .pointer-3{
+
+    .pointer-3 {
         width: 105px;
     }
-    .pipeline-info{
+
+    .pipeline-info {
         padding: 16px;
     }
+
+    .pipeline-image {
+        grid-row: 15 / 10;
+
+    }
 }
-@media(max-width:575px){
-    .page-footer{
+
+@media (max-width: 1080px) {
+    .pipeline-image {
+        grid-row: 14 / 10;
+    }
+}
+
+@media(max-width:991.99px) {
+    .pipeline-conatiner {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+        gap: 24px;
+    }
+
+    .pointer-2,
+    .pointer-1,
+    .pointer-3,
+    .pointer-4,
+    .pointer-5 {
+        display: none;
+    }
+
+    .pipeline-image {
+        order: 1;
+    }
+
+    .pipeline-info-box-1 {
+        order: 2;
+    }
+
+    .pipeline-info-box-2 {
+        order: 3;
+    }
+
+    .pipeline-info-box-3 {
+        order: 4;
+    }
+
+    .pipeline-image .pipeline-img-box {
+        max-width: 225px;
+        margin: auto;
+    }
+
+    .pipeline-info {
+        padding: 24px;
+    }
+
+    .pipeline-info .pipeline-txt {
+        margin-top: 16px;
+    }
+
+    #pipeline-section .section-header {
+        margin-bottom: 36px;
+    }
+
+    .pipeline-image-txt h6 {
+        font-size: 18px;
+    }
+
+    .pipeline-image-txt p {
+        font-size: 14px;
+    }
+
+    .pipeline-info-box{
+        position: relative;
+    }
+
+}
+
+
+
+
+@media(max-width:575.99px) {
+    .page-footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .footer-right p{
+
+    .footer-right p {
         text-align: left;
     }
+
     .footer-right .site-desc,
-    .footer-bottom{
+    .footer-bottom {
         gap: 8px;
     }
+
     .contact-email,
     .contact-info,
-    .footer-right{
+    .footer-right {
         max-width: 100%;
-    } 
+    }
+}
+
+@media screen and (min-width: 1009.99px) and (max-width:1080px) {
+
+    .pointer-2,
+    .pointer-3 {
+        transform: translate(0, -50%);
+    }
 }
